@@ -1,13 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CustomerOnboarding.Data
 {
-    internal class CustomerOnboardingContext : DbContext
+    public class CustomerOnboardingContext : DbContext
     {
+        public CustomerOnboardingContext(DbContextOptions<CustomerOnboardingContext> options) : base(options) { }
+
+        public DbSet<Customer> Customers { get; set; }
     }
 }

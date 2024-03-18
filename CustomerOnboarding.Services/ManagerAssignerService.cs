@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace CustomerOnboarding.Services
+﻿namespace CustomerOnboarding.Services
 {
-    internal class ManagerAssignerService
+    public class ManagerAssignerService
     {
+        public async Task<string> AssignAccountManager(Guid customerId)
+        {
+            await Task.Delay(250);
+            return "John Doe";
+        }
     }
 }

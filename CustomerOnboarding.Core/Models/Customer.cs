@@ -4,7 +4,8 @@ namespace CustomerOnboarding.Core.Models
 {
     public class Customer
     {
-        public string Name { get; init; }
-        public ShirtSize ShirtSize { get; init; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public ShirtSize ShirtSize { get; set; }
     }
 }
