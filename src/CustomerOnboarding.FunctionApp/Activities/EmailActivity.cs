@@ -11,6 +11,7 @@ namespace CustomerOnboarding.FunctionApp.Activities
         public async Task<bool> WelcomeCustomer([ActivityTrigger] OnboardingCompleteOutcome outcome)
         {
             _logger.LogWarning("[Activity Started] Sending welcome email to customer " + outcome);
+            await Task.Delay(2000);
             var sent = await _service.WelcomeCustomer(outcome);
             _logger.LogWarning("[Activity Complete] Sent welcome email to customer " + outcome);
             return sent;
@@ -23,6 +24,7 @@ namespace CustomerOnboarding.FunctionApp.Activities
             var customerId = outcome.Customer.Id;
 
             _logger.LogWarning("[Activity Started] Notifying manager that onboarding has completed for customer " + customerId);
+            await Task.Delay(2000);
             var sent = await _service.NotifyManager(outcome, successfulEmail);
             _logger.LogWarning("[Activity Complete] Notified manager that onboarding has completed for customer" + customerId);
             return sent;

@@ -4,7 +4,7 @@
     {
         public async Task<string> AssignAccountManager(Guid customerId)
         {
-            await Task.Delay(500);
+            await Task.Delay(2000);
             return "John Doe";
         }
     }

@@ -6,7 +6,7 @@ namespace CustomerOnboarding.Services
     {
         public async Task<Credentials> CreateCredentials(Guid customerId)
         {
-            await Task.Delay(500);
+            await Task.Delay(2000);
             return new Credentials("foo", "bar");
         }
     }
