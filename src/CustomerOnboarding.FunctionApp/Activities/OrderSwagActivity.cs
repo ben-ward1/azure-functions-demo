@@ -11,6 +11,7 @@ namespace CustomerOnboarding.FunctionApp.Activities
     internal class OrderSwagActivity(SwagOrderingService _service, ILogger<OrderSwagActivity> _logger)
     {
         [Function(nameof(Order))]
+        [QueueOutput("purchase-order-input", Connection = "StorageAccountConnection")]
         public async Task<ShirtSize> Order([ActivityTrigger] Customer customer)
         {
             _logger.LogWarning("[Activity Started] Ordering swag for customer " + customer.Id);
