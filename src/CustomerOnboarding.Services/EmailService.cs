@@ -17,7 +17,7 @@ namespace CustomerOnboarding.Services
                 emailText += "\nThey had no email on file, so you may need to reach out to them directly.";
             }
 
-            await Task.Delay(120);
+            await Task.Delay(500);
             _logger.LogWarning(emailText);
 
             return true;
@@ -41,7 +41,7 @@ namespace CustomerOnboarding.Services
                 emailText += $"\nWe didn't have your size shirt in stock, but hopefully a size {shirtOrdered} will do.";
             }
 
-            await Task.Delay(120);
+            await Task.Delay(500);
             _logger.LogWarning(emailText);
 
             return true;
