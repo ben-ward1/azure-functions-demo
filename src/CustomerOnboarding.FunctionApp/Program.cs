@@ -10,7 +10,7 @@ using CustomerOnboarding.Data;
 using CustomerOnboarding.Services;
 
 var host = new HostBuilder()
-    .ConfigureFunctionsWorkerDefaults()
+    .ConfigureFunctionsWebApplication()
     .ConfigureAppConfiguration((hostingContext, config) =>
     {
         config.SetBasePath(Directory.GetCurrentDirectory())
