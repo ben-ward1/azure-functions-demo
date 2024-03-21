@@ -23,3 +23,7 @@ This is a sample app I put together for the [Birmingham .NET meetup](https://www
           "StorageAccountConnection": "<azure-storage-account-connection-string>"
         }
     }
+
+## Codebase
+
+Look at the files in the Triggers and Activities directories for examples of Azure Functions' capabilities. The code outside of these directories are boilerplate sample code.
